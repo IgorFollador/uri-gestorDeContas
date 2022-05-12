@@ -1,14 +1,14 @@
 @extends('layouts.default')
 
 @section('content')
-    <h1>Forma de agamento</h1>
+    <h1>Forma de pagamento</h1>
     <table class = "table table-stripe table-bordered table-hover">
         <thead>
             <th>Descricao</th>
         </thead>
 
         <tbody>
-            @foreach($forma_de_pagamento as $forma_de_pagamento)
+            @foreach($forma_de_pagamentos as $forma_de_pagamento)
                 <tr>
                     <td>{{ $forma_de_pagamento->descricao }}</td>
                     <td>
@@ -21,7 +21,7 @@
         </tbody>
     </table>
 
-    {{ $forma_de_pagamento->links("pagination::bootstrap-4") }}
+    {{ $forma_de_pagamentos->links("pagination::bootstrap-4") }}
 
     <a href="{{ route('FormaDePagamento.create', []) }}" class="btn btn-info">Adicionar</a>
 @stop

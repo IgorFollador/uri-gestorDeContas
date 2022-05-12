@@ -9,8 +9,8 @@ use App\Http\Requests\FormaDePagamentoRequest;
 class FormaDePagamentoController extends Controller
 {
     public function index() {
-        $forma_de_pagamento = FormaDePagamento::All();
-        return view ('FormaDePagamento.index', ['formas de pagamento'=>$forma_de_pagamento]);
+        $forma_de_pagamentos = FormaDePagamento::orderBy('descricao')->paginate(5);
+        return view ('FormaDePagamento.index', ['forma_de_pagamentos'=>$forma_de_pagamentos]);
     }
 
     public function create() {
@@ -30,7 +30,7 @@ class FormaDePagamentoController extends Controller
 
     public function edit($id) {
         $forma_de_pagamento = FormaDePagamento::find($id);
-        return view('FormaDePagamento.edit', compact('FormaDePagamento'));
+        return view('FormaDePagamento.edit', compact('forma_de_pagamento'));
     }
 
     public function update(FormaDePagamentoRequest $request, $id) {
