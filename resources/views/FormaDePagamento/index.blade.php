@@ -23,9 +23,9 @@
 
     {{ $forma_de_pagamentos->links("pagination::bootstrap-4") }}
 
-    <a href="{{ route('FormaDePagamento.create', []) }}" class="btn btn-info">Adicionar</a>
+    <a href="{{ route('FormaDePagamento.create', []) }}" class="btn-sm btn-info">Adicionar</a>
 @stop
 
 @section('table-delete')
-"forma_de_pagamento"
+"FormaDePagamento"
 @endsection

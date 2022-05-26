@@ -29,3 +29,7 @@ Route::group(['prefix'=>'FormaDePagamento', 'where'=>['id'=>'[0-9]+']], function
 
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

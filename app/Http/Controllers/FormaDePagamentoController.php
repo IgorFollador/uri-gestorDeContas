@@ -24,9 +24,23 @@ class FormaDePagamentoController extends Controller
     }
 
     public function destroy($id) {
+		try {
+		    FormaDePagamento::find($id)->delete();
+			$ret = array('status'=>200, 'msg'=>"null");
+		} catch (\Illuminate\Database\QueryException $e) {
+			$ret = array('status'=>500, 'msg'=>$e->getMessage());
+		} 
+		catch (\PDOException $e) {
+			$ret = array('status'=>500, 'msg'=>$e->getMessage());
+		}
+		return $ret;
+	}
+
+    //old destroy method
+    /*public function destroy($id) {
         FormaDePagamento::find($id)->delete();
         return redirect()->route('FormaDePagamento');
-    }
+    }*/
 
     public function edit($id) {
         $forma_de_pagamento = FormaDePagamento::find($id);
