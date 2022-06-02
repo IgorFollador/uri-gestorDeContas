@@ -1425,7 +1425,7 @@
             "support": {
                 "source": "https://github.com/laravel/ui/tree/v3.4.6"
             },
-            "time": "2022-05-20T13:38:08+00:00"
+            "time": "2022-05-20T13:38:08+00:0
         },
         {
             "name": "laravelcollective/html",
