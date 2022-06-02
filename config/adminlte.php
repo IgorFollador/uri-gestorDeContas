@@ -236,24 +236,21 @@ return [
         ],
 
         // Sidebar items:
-        ['header' => 'Formas De Pagamento'],
+        ['header' => 'USUARIOS'],
         [
-            'text' => 'Listagem',
-            'url'  => 'FormaDePagamento',
-            'icon' => 'fas fa-fw fa-user',
+            'text' => 'Usuarios',
+            'url'  => 'usuarios',
+            'icon' => 'fas fa-fw fa-users',
         ],
+
+        ['header' => 'FORMAS DE PAGAMENTO'],
         [
             'text' => 'Formas de Pagamento',
             'url'  => 'FormaDePagamento',
             'icon' => 'fas fa-fw fa-flag',
         ],
         
-        ['header' => 'USUARIOS'],
-        [
-            'text' => 'Usuarios',
-            'url'  => 'usuarios',
-            'icon' => 'fas fa-fw fa-users',
-        ]
+        
     ],
 
     /*
