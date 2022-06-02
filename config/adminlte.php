@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'LaraFlix',
+    'title' => 'Gestor de contas',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -44,13 +44,12 @@ return [
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
     |
     */
-
-    'logo' => '<b>Lara</b>Flix',
+    'logo' => '<b>Gestor</b>DeContas',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'LaraFlix',
+    'logo_img_alt' => 'GestorDeContas',
 
     /*
     |--------------------------------------------------------------------------
@@ -237,6 +236,17 @@ return [
         ],
 
         // Sidebar items:
+        ['header' => 'Formas De Pagamento'],
+        [
+            'text' => 'Listagem',
+            'url'  => 'FormaDePagamento',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'Formas de Pagamento',
+            'url'  => 'FormaDePagamento',
+            'icon' => 'fas fa-fw fa-flag',
+        ],
         
         ['header' => 'USUARIOS'],
         [
