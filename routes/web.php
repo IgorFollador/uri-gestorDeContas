@@ -16,6 +16,15 @@ Route::group(['prefix'=>'FormaDePagamento', 'where'=>['id'=>'[0-9]+']], function
     Route::put('{id}/update',   ['as'=>'FormaDePagamento.update',     'uses'=>'\App\Http\Controllers\FormaDePagamentoController@update']);
 });
 
+Route::group(['prefix'=>'jurosEMultas', 'where'=>['id'=>'[0-9]+']], function() {
+    Route::get('',                 ['as'=>'jurosEMultas',            'uses'=>'\App\Http\Controllers\JurosEMultasController@index']);
+    Route::get('create',           ['as'=>'jurosEMultas.create',     'uses'=>'\App\Http\Controllers\JurosEMultasController@create']);
+    Route::get('{id}/destroy',     ['as'=>'jurosEMultas.destroy',    'uses'=>'\App\Http\Controllers\JurosEMultasController@destroy']);
+    Route::get('{id}/edit',        ['as'=>'jurosEMultas.edit',       'uses'=>'\App\Http\Controllers\JurosEMultasController@edit']);
+    Route::put('{id}/update',      ['as'=>'jurosEMultas.update',     'uses'=>'\App\Http\Controllers\JurosEMultasController@update']);
+    Route::post('store',           ['as'=>'jurosEMultas.store',      'uses'=>'\App\Http\Controllers\JurosEMultasController@store']);
+});
+
 Route::group(['prefix'=>'usuarios', 'where'=>['id'=>'[0-9]+']], function() {
     Route::get('',                 ['as'=>'usuarios',            'uses'=>'\App\Http\Controllers\UsuariosController@index']);
     Route::get('create',           ['as'=>'usuarios.create',     'uses'=>'\App\Http\Controllers\UsuariosController@create']);

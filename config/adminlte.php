@@ -249,6 +249,13 @@ return [
             'url'  => 'FormaDePagamento',
             'icon' => 'fas fa-fw fa-flag',
         ],
+
+        ['header' => 'JUROS E MULTA'],
+        [
+            'text' => 'Juro e multa',
+            'url'  => 'jurosEMultas',
+            'icon' => 'fas fa-fw fa-flag',
+        ],
         
         
     ],
