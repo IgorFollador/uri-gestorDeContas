@@ -25,6 +25,24 @@ Route::group(['prefix'=>'usuarios', 'where'=>['id'=>'[0-9]+']], function() {
     Route::post('store',           ['as'=>'usuarios.store',      'uses'=>'\App\Http\Controllers\UsuariosController@store']);
 });
 
+Route::group(['prefix'=>'contas', 'where'=>['id'=>'[0-9]+']], function() {
+    Route::get('',                 ['as'=>'contas',            'uses'=>'\App\Http\Controllers\ContasController@index']);
+    Route::get('create',           ['as'=>'contas.create',     'uses'=>'\App\Http\Controllers\ContasController@create']);
+    Route::get('{id}/destroy',     ['as'=>'contas.destroy',    'uses'=>'\App\Http\Controllers\ContasController@destroy']);
+    Route::get('{id}/edit',        ['as'=>'contas.edit',       'uses'=>'\App\Http\Controllers\ContasController@edit']);
+    Route::put('{id}/update',      ['as'=>'contas.update',     'uses'=>'\App\Http\Controllers\ContasController@update']);
+    Route::post('store',           ['as'=>'contas.store',      'uses'=>'\App\Http\Controllers\ContasController@store']);
+});
+
+Route::group(['prefix'=>'categoriaContas', 'where'=>['id'=>'[0-9]+']], function() {
+    Route::get('',                 ['as'=>'categoriaContas',            'uses'=>'\App\Http\Controllers\CategoriaContasController@index']);
+    Route::get('create',           ['as'=>'categoriaContas.create',     'uses'=>'\App\Http\Controllers\CategoriaContasController@create']);
+    Route::get('{id}/destroy',     ['as'=>'categoriaContas.destroy',    'uses'=>'\App\Http\Controllers\CategoriaContasController@destroy']);
+    Route::get('{id}/edit',        ['as'=>'categoriaContas.edit',       'uses'=>'\App\Http\Controllers\CategoriaContasController@edit']);
+    Route::put('{id}/update',      ['as'=>'categoriaContas.update',     'uses'=>'\App\Http\Controllers\CategoriaContasController@update']);
+    Route::post('store',           ['as'=>'categoriaContas.store',      'uses'=>'\App\Http\Controllers\CategoriaContasController@store']);
+});
+
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');

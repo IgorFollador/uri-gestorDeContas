@@ -249,6 +249,20 @@ return [
             'url'  => 'FormaDePagamento',
             'icon' => 'fas fa-fw fa-flag',
         ],
+
+        ['header' => 'CONTAS'],
+        [
+            'text' => 'Contas',
+            'url'  => 'contas',
+            'icon' => 'fas fa-fw fa-flag',
+        ],
+
+        ['header' => 'CATEGORIA DE CONTAS'],
+        [
+            'text' => 'Categoria de Contas',
+            'url'  => 'categoriaContas',
+            'icon' => 'fas fa-fw fa-flag',
+        ],
         
         
     ],
