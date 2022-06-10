@@ -269,8 +269,12 @@ return [
             'url'  => 'jurosEMultas',
             'icon' => 'fas fa-fw fa-flag',
         ],
-        
-        
+        ['header' => 'PARCELAS'],
+        [
+            'text' => 'Parcelas',
+            'url'  => 'parcelas',
+            'icon' => 'fas fa-fw fa-flag',
+        ],
     ],
 
     /*
