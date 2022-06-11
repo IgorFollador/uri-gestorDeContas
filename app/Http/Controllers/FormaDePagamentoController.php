@@ -36,12 +36,6 @@ class FormaDePagamentoController extends Controller
 		return $ret;
 	}
 
-    //old destroy method
-    /*public function destroy($id) {
-        FormaDePagamento::find($id)->delete();
-        return redirect()->route('FormaDePagamento');
-    }*/
-
     public function edit($id) {
         $forma_de_pagamento = FormaDePagamento::find($id);
         return view('FormaDePagamento.edit', compact('forma_de_pagamento'));

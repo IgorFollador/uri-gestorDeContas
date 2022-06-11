@@ -269,6 +269,12 @@ return [
             'url'  => 'jurosEMultas',
             'icon' => 'fas fa-fw fa-flag',
         ],
+        ['header' => 'RENEGOCIACAO'],
+        [
+            'text' => 'Renegociacoes de Dívidas',
+            'url'  => 'renegociacao',
+            'icon' => 'fas fa-fw fa-flag',
+        ],
         
         
     ],
