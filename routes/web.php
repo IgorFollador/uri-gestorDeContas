@@ -61,6 +61,15 @@ Route::group(['prefix'=>'categoriaContas', 'where'=>['id'=>'[0-9]+']], function(
     Route::post('store',           ['as'=>'categoriaContas.store',      'uses'=>'\App\Http\Controllers\CategoriaContasController@store']);
 });
 
+Route::group(['prefix'=>'renegociacao', 'where'=>['id'=>'[0-9]+']], function() {
+    Route::get('',                 ['as'=>'renegociacao',            'uses'=>'\App\Http\Controllers\RenegociacaoController@index']);
+    Route::get('create',           ['as'=>'renegociacao.create',     'uses'=>'\App\Http\Controllers\RenegociacaoController@create']);
+    Route::get('{id}/destroy',     ['as'=>'renegociacao.destroy',    'uses'=>'\App\Http\Controllers\RenegociacaoController@destroy']);
+    Route::get('{id}/edit',        ['as'=>'renegociacao.edit',       'uses'=>'\App\Http\Controllers\RenegociacaoController@edit']);
+    Route::put('{id}/update',      ['as'=>'renegociacao.update',     'uses'=>'\App\Http\Controllers\RenegociacaoController@update']);
+    Route::post('store',           ['as'=>'renegociacao.store',      'uses'=>'\App\Http\Controllers\RenegociacaoController@store']);
+});
+
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');

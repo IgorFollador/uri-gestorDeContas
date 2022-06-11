@@ -263,12 +263,21 @@ return [
             'url'  => 'categoriaContas',
             'icon' => 'fas fa-fw fa-flag',
         ],
+      
         ['header' => 'JUROS E MULTA'],
         [
             'text' => 'Juro e multa',
             'url'  => 'jurosEMultas',
             'icon' => 'fas fa-fw fa-flag',
         ],
+
+        ['header' => 'RENEGOCIACAO'],
+        [
+            'text' => 'Renegociacoes de Dívidas',
+            'url'  => 'renegociacao',
+            'icon' => 'fas fa-fw fa-flag',
+        ],
+        
         ['header' => 'PARCELAS'],
         [
             'text' => 'Parcelas',
