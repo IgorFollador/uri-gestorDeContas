@@ -284,6 +284,21 @@ return [
             'url'  => 'parcelas',
             'icon' => 'fas fa-fw fa-flag',
         ],
+
+        ['header' => 'HISTORICOS'],
+        [
+            'text' => 'Historicos',
+            'url'  => 'historicos',
+            'icon' => 'fas fa-fw fa-flag',
+        ],
+
+        ['header' => 'TESOURARIAS'],
+        [
+            'text' => 'Tesourarias',
+            'url'  => 'tesourarias',
+            'icon' => 'fas fa-fw fa-flag',
+        ],
+
     ],
 
     /*
