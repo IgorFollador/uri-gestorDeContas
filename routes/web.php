@@ -53,7 +53,7 @@ Route::group(['prefix'=>'tesourarias', 'where'=>['id'=>'[0-9]+']], function() {
 });
 
 Route::group(['prefix'=>'usuarios', 'where'=>['id'=>'[0-9]+']], function() {
-    Route::get('',                 ['as'=>'usuarios',            'uses'=>'\App\Http\Controllers\UsuariosController@index']);
+    Route::any('',                 ['as'=>'usuarios',            'uses'=>'\App\Http\Controllers\UsuariosController@index']);
     Route::get('create',           ['as'=>'usuarios.create',     'uses'=>'\App\Http\Controllers\UsuariosController@create']);
     Route::get('{id}/destroy',     ['as'=>'usuarios.destroy',    'uses'=>'\App\Http\Controllers\UsuariosController@destroy']);
     Route::get('{id}/edit',        ['as'=>'usuarios.edit',       'uses'=>'\App\Http\Controllers\UsuariosController@edit']);

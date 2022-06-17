@@ -8,8 +8,16 @@ use App\Http\Requests\UsuarioRequest;
 
 class UsuariosController extends Controller
 {
-    public function index () {
-        $usuarios = Usuario::orderBy('nome')->paginate(5);
+    public function index (Request $filto) {
+        $filtragem = $filto->get('desc_filtro');
+        if($filtragem == null){
+            $usuarios = Usuario::orderby('nome')->paginate(10);
+        } else {
+            $usuarios = Usuario::where('nome', 'like', '%'.$filtragem.'%')
+            ->orderby('nome')
+            ->paginate(10)
+            ->setpath('usuarios?desc_filtro='.$filtragem);
+        }
         return view('usuarios.index', ['usuarios'=>$usuarios]);
     }
 
