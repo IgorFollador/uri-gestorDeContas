@@ -25,6 +25,7 @@ class ContaRequest extends FormRequest
     {
         return [
             'descricao' => 'required',
+            'forma_de_pagamento_id' => 'required',
         ];
     }
 }

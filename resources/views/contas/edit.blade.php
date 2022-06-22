@@ -19,6 +19,13 @@
 		</div>
 
 		<div class="form-group">
+			{!! Form::label('forma_de_pagamento_id', 'Forma de Pagamento:') !!}
+			{!! Form::select('forma_de_pagamento_id',
+				\App\Models\FormaDePagamento::orderBy('descricao')->pluck('descricao', 'id')->toArray(),
+				$conta->forma_de_pagamento_id, ['class'=>'form-control', 'required']) !!}
+		</div>
+
+		<div class="form-group">
 			{!! Form::submit('Editar Conta', ['class'=>'btn btn-primary']) !!}
 			{!! Form::reset('Limpar', ['class'=>'btn btn-default']) !!}
 		</div>
