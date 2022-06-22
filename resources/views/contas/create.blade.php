@@ -3,6 +3,8 @@
 @section('content')
 	<h3>Nova Conta</h3>
 
+	{!! Form::open(['route'=>'contas.store']) !!}
+
 	@if($errors->any())
 		<ul class="alert alert-danger">
 			@foreach($errors->all() as $error)
@@ -11,11 +13,16 @@
 		</ul>
 	@endif
 
-	{!! Form::open(['route'=>'contas.store']) !!}
-
 		<div class="form-group">
 			{!! Form::label('descricao', 'Descrição:') !!}
 			{!! Form::text('descricao', null, ['class'=>'form-control', 'required']) !!}
+		</div>
+
+		<div class="form-group">
+			{!! Form::label('forma_de_pagamento_id', 'Forma de Pagamento:') !!}
+			{!! Form::select('forma_de_pagamento_id',
+				\App\Models\FormaDePagamento::orderBy('descricao')->pluck('descricao', 'id')->toArray(),
+				null, ['class'=>'form-control', 'required']) !!}
 		</div>
 
 		<div class="form-group">

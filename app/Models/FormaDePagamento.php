@@ -11,4 +11,8 @@ class FormaDePagamento extends Model
     protected $table = "forma_de_pagamento";
     protected $fillable = ['descricao'];
 
+    public function contas() {
+        return $this->hasMany("App\Models\Conta");
+    }
+
 }

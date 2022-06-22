@@ -9,6 +9,11 @@ class Conta extends Model
 {
     use HasFactory;
     protected $table = "contas";
-    protected $fillable = ['descricao'];
+    protected $fillable = ['descricao', 'forma_de_pagamento_id'];
+
+    public function forma_de_pagamento() {
+        return $this->belongsTo("App\Models\FormaDePagamento");
+    }
+
 }
 
