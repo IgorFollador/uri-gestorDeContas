@@ -254,7 +254,7 @@ return [
         [
             'text' => 'Contas',
             'url'  => 'contas',
-            'icon' => 'fas fa-fw fa-flag',
+            'icon' => 'fas fa-chart-pie',
         ],
 
         ['header' => 'CATEGORIA DE CONTAS'],
