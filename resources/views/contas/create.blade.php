@@ -19,6 +19,13 @@
 		</div>
 
 		<div class="form-group">
+			{!! Form::label('categoriaContas_id', 'Categoria:') !!}
+			{!! Form::select('categoriaContas_id',
+				\App\Models\CategoriaConta::orderBy('categoria')->pluck('categoria', 'id')->toArray(),
+				null, ['class'=>'form-control', 'required']) !!}
+		</div>
+
+		<div class="form-group">
 			{!! Form::label('forma_de_pagamento_id', 'Forma de Pagamento:') !!}
 			{!! Form::select('forma_de_pagamento_id',
 				\App\Models\FormaDePagamento::orderBy('descricao')->pluck('descricao', 'id')->toArray(),
