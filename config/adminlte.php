@@ -284,6 +284,13 @@ return [
             'url'  => 'parcelas',
             'icon' => 'fas fa-fw fa-flag',
         ],
+
+        ['header' => 'MOEDAS'],
+        [
+            'text' => 'Moedas',
+            'url'  => 'moedas',
+            'icon' => 'fas fa-fw fa-flag',
+        ],
     ],
 
     /*

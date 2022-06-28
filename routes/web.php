@@ -70,6 +70,15 @@ Route::group(['prefix'=>'renegociacao', 'where'=>['id'=>'[0-9]+']], function() {
     Route::post('store',           ['as'=>'renegociacao.store',      'uses'=>'\App\Http\Controllers\RenegociacaoController@store']);
 });
 
+Route::group(['prefix'=>'moedas', 'where'=>['id'=>'[0-9]+']], function() {
+    Route::get('',                 ['as'=>'moedas',            'uses'=>'\App\Http\Controllers\MoedasController@index']);
+    Route::get('create',           ['as'=>'moedas.create',     'uses'=>'\App\Http\Controllers\MoedasController@create']);
+    Route::get('{id}/destroy',     ['as'=>'moedas.destroy',    'uses'=>'\App\Http\Controllers\MoedasController@destroy']);
+    Route::get('{id}/edit',        ['as'=>'moedas.edit',       'uses'=>'\App\Http\Controllers\MoedasController@edit']);
+    Route::put('{id}/update',      ['as'=>'moedas.update',     'uses'=>'\App\Http\Controllers\MoedasController@update']);
+    Route::post('store',           ['as'=>'moedas.store',      'uses'=>'\App\Http\Controllers\MoedasController@store']);
+});
+
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
