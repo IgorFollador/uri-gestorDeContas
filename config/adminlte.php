@@ -291,6 +291,13 @@ return [
             'url'  => 'moedas',
             'icon' => 'fas fa-fw fa-flag',
         ],
+
+        ['header' => 'ESTORNOS'],
+        [
+            'text' => 'Estornos',
+            'url'  => 'estornos',
+            'icon' => 'fas fa-fw fa-flag',
+        ],
     ],
 
     /*

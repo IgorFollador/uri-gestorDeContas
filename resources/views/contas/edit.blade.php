@@ -33,6 +33,13 @@
 		</div>
 
 		<div class="form-group">
+			{!! Form::label('moedas_id', 'Moeda:') !!}
+			{!! Form::select('moedas_id',
+				\App\Models\Moeda::orderBy('descricao')->pluck('descricao', 'id')->toArray(),
+				$conta->moedas_id, ['class'=>'form-control', 'required']) !!}
+		</div>
+
+		<div class="form-group">
 			{!! Form::submit('Editar Conta', ['class'=>'btn btn-primary']) !!}
 			{!! Form::reset('Limpar', ['class'=>'btn btn-default']) !!}
 		</div>

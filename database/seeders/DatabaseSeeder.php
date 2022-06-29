@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(FormaDePagamentoSeeder::class);
         $this->call(CategoriaContaSeeder::class);
+        $this->call(MoedaSeeder::class);
     }
 }

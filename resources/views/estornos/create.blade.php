@@ -1,9 +1,7 @@
 @extends('adminlte::page')
 
 @section('content')
-	<h3>Nova Conta</h3>
-
-	{!! Form::open(['route'=>'contas.store']) !!}
+	<h3>Novo Estorno</h3>
 
 	@if($errors->any())
 		<ul class="alert alert-danger">
@@ -13,23 +11,16 @@
 		</ul>
 	@endif
 
+	{!! Form::open(['route'=>'estornos.store']) !!}
+
 		<div class="form-group">
 			{!! Form::label('descricao', 'Descrição:') !!}
 			{!! Form::text('descricao', null, ['class'=>'form-control', 'required']) !!}
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('categoriaContas_id', 'Categoria:') !!}
-			{!! Form::select('categoriaContas_id',
-				\App\Models\CategoriaConta::orderBy('categoria')->pluck('categoria', 'id')->toArray(),
-				null, ['class'=>'form-control', 'required']) !!}
-		</div>
-
-		<div class="form-group">
-			{!! Form::label('forma_de_pagamento_id', 'Forma de Pagamento:') !!}
-			{!! Form::select('forma_de_pagamento_id',
-				\App\Models\FormaDePagamento::orderBy('descricao')->pluck('descricao', 'id')->toArray(),
-				null, ['class'=>'form-control', 'required']) !!}
+			{!! Form::label('valor', 'Valor:') !!}
+			{!! Form::text('valor', null, ['class'=>'form-control', 'required']) !!}
 		</div>
 
 		<div class="form-group">
@@ -40,9 +31,10 @@
 		</div>
 
 		<div class="form-group">
-			{!! Form::submit('Criar Conta', ['class'=>'btn btn-primary']) !!}
+			{!! Form::submit('Criar Estorno', ['class'=>'btn btn-primary']) !!}
 			{!! Form::reset('Limpar', ['class'=>'btn btn-default']) !!}
 		</div>
 
+		
 	{!! Form::close() !!}	
 @stop

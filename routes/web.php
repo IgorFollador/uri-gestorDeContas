@@ -79,6 +79,15 @@ Route::group(['prefix'=>'moedas', 'where'=>['id'=>'[0-9]+']], function() {
     Route::post('store',           ['as'=>'moedas.store',      'uses'=>'\App\Http\Controllers\MoedasController@store']);
 });
 
+Route::group(['prefix'=>'estornos', 'where'=>['id'=>'[0-9]+']], function() {
+    Route::get('',                 ['as'=>'estornos',            'uses'=>'\App\Http\Controllers\EstornosController@index']);
+    Route::get('create',           ['as'=>'estornos.create',     'uses'=>'\App\Http\Controllers\EstornosController@create']);
+    Route::get('{id}/destroy',     ['as'=>'estornos.destroy',    'uses'=>'\App\Http\Controllers\EstornosController@destroy']);
+    Route::get('{id}/edit',        ['as'=>'estornos.edit',       'uses'=>'\App\Http\Controllers\EstornosController@edit']);
+    Route::put('{id}/update',      ['as'=>'estornos.update',     'uses'=>'\App\Http\Controllers\EstornosController@update']);
+    Route::post('store',           ['as'=>'estornos.store',      'uses'=>'\App\Http\Controllers\EstornosController@store']);
+});
+
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
