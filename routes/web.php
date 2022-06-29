@@ -34,6 +34,24 @@ Route::group(['prefix'=>'parcelas', 'where'=>['id'=>'[0-9]+']], function() {
     Route::post('store',           ['as'=>'parcelas.store',      'uses'=>'\App\Http\Controllers\ParcelasController@store']);
 });
 
+Route::group(['prefix'=>'historicos', 'where'=>['id'=>'[0-9]+']], function() {
+    Route::get('',                 ['as'=>'historicos',            'uses'=>'\App\Http\Controllers\HistoricosController@index']);
+    Route::get('create',           ['as'=>'historicos.create',     'uses'=>'\App\Http\Controllers\HistoricosController@create']);
+    Route::get('{id}/destroy',     ['as'=>'historicos.destroy',    'uses'=>'\App\Http\Controllers\HistoricosController@destroy']);
+    Route::get('{id}/edit',        ['as'=>'historicos.edit',       'uses'=>'\App\Http\Controllers\HistoricosController@edit']);
+    Route::put('{id}/update',      ['as'=>'historicos.update',     'uses'=>'\App\Http\Controllers\HistoricosController@update']);
+    Route::post('store',           ['as'=>'historicos.store',      'uses'=>'\App\Http\Controllers\HistoricosController@store']);
+});
+
+Route::group(['prefix'=>'tesourarias', 'where'=>['id'=>'[0-9]+']], function() {
+    Route::get('',                 ['as'=>'tesourarias',            'uses'=>'\App\Http\Controllers\TesourariasController@index']);
+    Route::get('create',           ['as'=>'tesourarias.create',     'uses'=>'\App\Http\Controllers\TesourariasController@create']);
+    Route::get('{id}/destroy',     ['as'=>'tesourarias.destroy',    'uses'=>'\App\Http\Controllers\TesourariasController@destroy']);
+    Route::get('{id}/edit',        ['as'=>'tesourarias.edit',       'uses'=>'\App\Http\Controllers\TesourariasController@edit']);
+    Route::put('{id}/update',      ['as'=>'tesourarias.update',     'uses'=>'\App\Http\Controllers\TesourariasController@update']);
+    Route::post('store',           ['as'=>'tesourarias.store',      'uses'=>'\App\Http\Controllers\TesourariasController@store']);
+});
+
 Route::group(['prefix'=>'usuarios', 'where'=>['id'=>'[0-9]+']], function() {
     Route::get('',                 ['as'=>'usuarios',            'uses'=>'\App\Http\Controllers\UsuariosController@index']);
     Route::get('create',           ['as'=>'usuarios.create',     'uses'=>'\App\Http\Controllers\UsuariosController@create']);
