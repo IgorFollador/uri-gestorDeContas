@@ -106,6 +106,10 @@ Route::group(['prefix'=>'estornos', 'where'=>['id'=>'[0-9]+']], function() {
     Route::post('store',           ['as'=>'estornos.store',      'uses'=>'\App\Http\Controllers\EstornosController@store']);
 });
 
+Route::group(['prefix'=>'cotacoes'], function() {
+    Route::get('',                 ['as'=>'cotacoes',            'uses'=>'\App\Http\Controllers\CotacoesController@index']);
+});
+
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
