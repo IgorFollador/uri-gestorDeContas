@@ -51,10 +51,40 @@
 				null, ['class'=>'form-control', 'required']) !!}
 		</div>
 
+		<hr>
+
+		<h4>Parcelas</h4>
+		<div class="input_fields_wrap"></div>
+		<br>
+
+		<a style="float:right" class="add_field_button btn btn-default">Adicionar Parcela</a>
+
+		<br>
+		<hr>
+		
 		<div class="form-group">
 			{!! Form::submit('Criar Conta', ['class'=>'btn btn-primary']) !!}
 			{!! Form::reset('Limpar', ['class'=>'btn btn-default']) !!}
 		</div>
-
 	{!! Form::close() !!}	
+@stop
+
+@section('js')
+    <script>
+        $(document).ready(function(){
+            var wrapper = $(".input_fields_wrap");
+            var add_button = $(".add_field_button");
+            var x=0;
+            $(add_button).click(function(e){
+                x++;
+                var newField = '<div><div style="width:94%; float:left" id="parcelas">{!! Form::select("parcelas[]", \App\Models\Parcela::orderBy("descricao")->pluck("descricao","id")->toArray(), null, ["class"=>"form-control", "required", "placeholder"=>"Selecione uma parcela"]) !!}</div><button type="button" class="remove_field btn btn-danger btn-circle"><i class="fa fa-times"></button></div>';
+			$(wrapper).append(newField);
+            });
+            $(wrapper).on("click",".remove_field", function(e){
+                e.preventDefault(); 
+                $(this).parent('div').remove(); 
+                x--;
+            });
+        })
+    </script>
 @stop

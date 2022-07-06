@@ -18,8 +18,20 @@ class ContasController extends Controller
     }
 
     public function store(ContaRequest $request) {
-        $nova_conta = $request->all();
-        Conta::create($nova_conta);
+        $conta = Conta::create([
+            'descricao' => $request->get('descricao'),
+            'valor' => $request->get('valor'),
+            'forma_de_pagamento_id' => $request->get('forma_de_pagamento_id'),
+            'categoriaContas_id' => $request->get('categoriaContas_id'),
+            'moedas_id' => $request->get('categoriaContas_id'),
+            'juros_id' => $request->get('juros_id'),
+        ]);
+        foreach($parcelas as $p => $value) {
+            ContaParcela::create([
+                'conta_id' => $conta->id,
+                'parcela_id' => $parcelas[$p]
+            ]);
+        } 
         return redirect()->route('contas');
     }
 
