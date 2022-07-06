@@ -282,13 +282,6 @@ return [
             'icon' => 'fas fa-fw fa-flag',
         ],
 
-         // ['header' => 'RENEGOCIAÇÃO'],
-         [
-            'text' => 'Renegociações de Dívidas',
-            'url'  => 'renegociacao',
-            'icon' => 'fas fa-fw fa-lock-open',
-        ],
-
         // ['header' => 'HISTORICOS'],
         [
             'text' => 'Históricos',
@@ -298,7 +291,7 @@ return [
 
         // ['header' => 'RENEGOCIAÇÃO'],
         [
-            'text' => 'Renegociaçõs de Dívidas',
+            'text' => 'Renegociação de Dívidas',
             'url'  => 'renegociacao',
             'icon' => 'fas fa-fw fa-lock-open',
         ],
