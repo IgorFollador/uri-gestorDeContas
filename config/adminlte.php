@@ -279,7 +279,13 @@ return [
         [
             'text' => 'Moedas',
             'url'  => 'moedas',
-            'icon' => 'fas fa-fw fa-flag',
+            'icon' => 'fas fa-fw fa-money-bill-alt',
+        ],
+
+        [
+            'text' => 'Cotações',
+            'url'  => 'cotacoes',
+            'icon' => 'fas fa-fw fa-euro-sign',
         ],
 
         // ['header' => 'HISTORICOS'],
