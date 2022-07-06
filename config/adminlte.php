@@ -49,7 +49,7 @@ return [
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'GestorDeContas',
+    'logo_img_alt' => 'Logo',
 
     /*
     |--------------------------------------------------------------------------
@@ -87,7 +87,7 @@ return [
     'layout_fixed_sidebar' => null,
     'layout_fixed_navbar' => null,
     'layout_fixed_footer' => null,
-    'layout_dark_mode' => null,
+    'layout_dark_mode' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -128,7 +128,7 @@ return [
     'classes_content' => '',
     'classes_sidebar' => 'sidebar-dark-primary elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_topnav' => 'navbar-dark',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -224,79 +224,79 @@ return [
     */
 
     'menu' => [
-        // Navbar items:
-        [
-            'type'         => 'navbar-search',
-            'text'         => 'search',
-            'topnav_right' => true,
-        ],
-        [
-            'type'         => 'fullscreen-widget',
-            'topnav_right' => true,
-        ],
-
         // Sidebar items:
-        ['header' => 'USUARIOS'],
         [
-            'text' => 'Usuarios',
-            'url'  => 'usuarios',
-            'icon' => 'fas fa-fw fa-users',
-        ],
-
-        ['header' => 'FORMAS DE PAGAMENTO'],
-        [
-            'text' => 'Formas de Pagamento',
-            'url'  => 'FormaDePagamento',
-            'icon' => 'fas fa-fw fa-flag',
+            'text' => 'Home',
+            'url'  => '',
+            'icon' => 'fas fa-fw fa-home',
         ],
 
         ['header' => 'CONTAS'],
         [
             'text' => 'Contas',
             'url'  => 'contas',
-            'icon' => 'fas fa-chart-pie',
+            'icon' => 'fas fa-cash-register',
         ],
 
-        ['header' => 'CATEGORIA DE CONTAS'],
+        // ['header' => 'FORMAS DE PAGAMENTO'],
+        [
+            'text' => 'Formas de Pagamento',
+            'url'  => 'FormaDePagamento',
+            'icon' => 'fas fa-fw fa-money-check-alt',
+        ],
+
+        // ['header' => 'CATEGORIA DE CONTAS'],
         [
             'text' => 'Categoria de Contas',
             'url'  => 'categoriaContas',
-            'icon' => 'fas fa-fw fa-flag',
+            'icon' => 'fas fa-fw fa-bars',
         ],
       
-        ['header' => 'JUROS E MULTA'],
+        // ['header' => 'JUROS E MULTA'],
         [
-            'text' => 'Juro e multa',
+            'text' => 'Juros e Multas',
             'url'  => 'jurosEMultas',
-            'icon' => 'fas fa-fw fa-flag',
-        ],
-
-        ['header' => 'RENEGOCIACAO'],
-        [
-            'text' => 'Renegociacoes de Dívidas',
-            'url'  => 'renegociacao',
-            'icon' => 'fas fa-fw fa-flag',
+            'icon' => 'fas fa-fw fa-balance-scale',
         ],
         
-        ['header' => 'PARCELAS'],
+        // ['header' => 'PARCELAS'],
         [
             'text' => 'Parcelas',
             'url'  => 'parcelas',
-            'icon' => 'fas fa-fw fa-flag',
+            'icon' => 'fas fa-fw fa-list-ol',
         ],
 
-        ['header' => 'HISTORICOS'],
+        ['header' => 'MAIS'],
         [
-            'text' => 'Historicos',
+            'text' => 'Históricos',
             'url'  => 'historicos',
-            'icon' => 'fas fa-fw fa-flag',
+            'icon' => 'fas fa-fw fa-newspaper',
         ],
 
-        ['header' => 'TESOURARIAS'],
+        // ['header' => 'RENEGOCIAÇÃO'],
+        [
+            'text' => 'Renegociaçõs de Dívidas',
+            'url'  => 'renegociacao',
+            'icon' => 'fas fa-fw fa-lock-open',
+        ],
+
+        // ['header' => 'TESOURARIAS'],
         [
             'text' => 'Tesourarias',
             'url'  => 'tesourarias',
-            'icon' => 'fas fa-fw fa-flag',
+            'icon' => 'fas fa-fw fa-cut',
+        ],
+
+        ['header' => 'USUÁRIOS'],
+        [
+            'text' => 'Usuários',
+            'url'  => 'usuarios',
+            'icon' => 'fas fa-fw fa-users',
+        ],
+        [
+            'text' => 'Configurações',
+            'url'  => '',
+            'icon' => 'fas fa-fw fa-cogs',
         ],
 
     ],
