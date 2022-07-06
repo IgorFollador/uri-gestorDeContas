@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class JuroEMultaRequest extends FormRequest
+class JuroRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,7 @@ class JuroEMultaRequest extends FormRequest
     public function rules()
     {
         return [
-            'descricao' => 'required',
+            'porcentagem' => 'required',
         ];
     }
 }

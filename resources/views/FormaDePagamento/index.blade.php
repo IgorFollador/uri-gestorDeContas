@@ -16,7 +16,6 @@
                         <a href="{{ route('FormaDePagamento.edit', ['id'=>$forma_de_pagamento->id]) }}" class="btn-sm btn-success">Editar</a>
                         <a href="#" onclick="return ConfirmaExclusao({{$forma_de_pagamento->id}})" class="btn-sm btn-danger">Remover</a>
                     </td>
-                    <br>
                 </tr>
             @endforeach
         </tbody>

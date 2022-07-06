@@ -16,7 +16,6 @@
                         <a href="{{ route('renegociacao.edit', ['id'=>$renegociacao->id]) }}" class="btn-sm btn-success">Editar</a>
                         <a href="#" onclick="return ConfirmaExclusao({{$renegociacao->id}})" class="btn-sm btn-danger">Remover</a>
                     </td>
-                    <br>
                 </tr>
             @endforeach
         </tbody>

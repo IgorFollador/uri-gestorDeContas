@@ -16,7 +16,6 @@
                         <a href="{{ route('moedas.edit', ['id'=>$moeda->id]) }}" class="btn-sm btn-success">Editar</a>
                         <a href="#" onclick="return ConfirmaExclusao({{$moeda->id}})" class="btn-sm btn-danger">Remover</a>
                     </td>
-                    <br>
                 </tr>
             @endforeach
         </tbody>

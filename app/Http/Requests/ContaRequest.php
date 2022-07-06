@@ -25,9 +25,11 @@ class ContaRequest extends FormRequest
     {
         return [
             'descricao' => 'required',
+            'valor' => 'required',
             'forma_de_pagamento_id' => 'required',
             'moedas_id' => 'required',
             'categoriaContas_id' => 'required',
+            'juros_id' => 'nullable'
         ];
     }
 }

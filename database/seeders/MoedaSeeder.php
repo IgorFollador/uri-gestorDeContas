@@ -19,5 +19,6 @@ class MoedaSeeder extends Seeder
         Moeda::create(['descricao' => 'Dólar']);
         Moeda::create(['descricao' => 'Euro']);
         Moeda::create(['descricao' => 'Bitcoin']);
+        Moeda::create(['descricao' => 'Ethereum']);
     }
 }

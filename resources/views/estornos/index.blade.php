@@ -20,7 +20,6 @@
                         <a href="{{ route('estornos.edit', ['id'=>$estorno->id]) }}" class="btn-sm btn-success">Editar</a>
                         <a href="#" onclick="return ConfirmaExclusao({{$estorno->id}})" class="btn-sm btn-danger">Remover</a>
                     </td>
-                    <br>
                 </tr>
             @endforeach
         </tbody>

@@ -15,7 +15,6 @@
                         <a href="{{ route('historicos.edit', ['id'=>$historico->id]) }}" class="btn-sm btn-success">Editar</a>
                         <a href="#" onclick="return ConfirmaExclusao({{$historico->id}})" class="btn-sm btn-danger">Remover</a>
                     </td>
-                    <br>
                 </tr>
             @endforeach
         </tbody>

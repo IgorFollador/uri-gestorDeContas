@@ -20,6 +20,6 @@ class FormaDePagamentoSeeder extends Seeder
         FormaDePagamento::create(['descricao' => 'Cartão de Débito']);
         FormaDePagamento::create(['descricao' => 'Cheque']);
         FormaDePagamento::create(['descricao' => 'Boleto']);
-        FormaDePagamento::create(['descricao' => 'Bitcoin']);
+        FormaDePagamento::create(['descricao' => 'Criptomoeda']);
     }
 }

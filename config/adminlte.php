@@ -264,10 +264,10 @@ return [
             'icon' => 'fas fa-fw fa-flag',
         ],
       
-        ['header' => 'JUROS E MULTA'],
+        ['header' => 'JUROS'],
         [
-            'text' => 'Juro e multa',
-            'url'  => 'jurosEMultas',
+            'text' => 'Juros',
+            'url'  => 'juros',
             'icon' => 'fas fa-fw fa-flag',
         ],
 

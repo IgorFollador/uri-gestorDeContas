@@ -9,7 +9,7 @@ class Conta extends Model
 {
     use HasFactory;
     protected $table = "contas";
-    protected $fillable = ['descricao', 'forma_de_pagamento_id', 'moedas_id', 'categoriaContas_id'];
+    protected $fillable = ['descricao', 'valor', 'forma_de_pagamento_id', 'moedas_id', 'categoriaContas_id', 'juros_id'];
 
     public function forma_de_pagamento() {
         return $this->belongsTo("App\Models\FormaDePagamento");
@@ -21,6 +21,10 @@ class Conta extends Model
 
     public function categoriaContas() {
         return $this->belongsTo("App\Models\CategoriaConta", "categoriaContas_id");
+    }
+
+    public function juros() {
+        return $this->belongsTo("App\Models\Juro");
     }
 }
 
