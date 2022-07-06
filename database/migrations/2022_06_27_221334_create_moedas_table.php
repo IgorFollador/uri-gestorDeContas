@@ -13,10 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('contas', function (Blueprint $table) {
+        Schema::create('moedas', function (Blueprint $table) {
             $table->id();
-            $table->string('descricao', 100);
-            $table->float('valor');
+            $table->string('descricao', 50);
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contas');
+        Schema::dropIfExists('moedas');
     }
 };

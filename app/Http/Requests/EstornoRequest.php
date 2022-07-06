@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ContaRequest extends FormRequest
+class EstornoRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,10 +26,7 @@ class ContaRequest extends FormRequest
         return [
             'descricao' => 'required',
             'valor' => 'required',
-            'forma_de_pagamento_id' => 'required',
-            'moedas_id' => 'required',
-            'categoriaContas_id' => 'required',
-            'juros_id' => 'nullable'
+            'moedas_id' => 'required',            
         ];
     }
 }

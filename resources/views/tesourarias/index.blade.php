@@ -15,7 +15,6 @@
                         <a href="{{ route('tesourarias.edit', ['id'=>$tesouraria->id]) }}" class="btn-sm btn-success">Editar</a>
                         <a href="#" onclick="return ConfirmaExclusao({{$tesouraria->id}})" class="btn-sm btn-danger">Remover</a>
                     </td>
-                    <br>
                 </tr>
             @endforeach
         </tbody>

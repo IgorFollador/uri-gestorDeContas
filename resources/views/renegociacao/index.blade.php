@@ -5,6 +5,7 @@
     <table class = "table table-stripe table-bordered table-hover">
         <thead>
             <th>Descricao</th>
+            <th>Ações</th>
         </thead>
 
         <tbody>
@@ -15,7 +16,6 @@
                         <a href="{{ route('renegociacao.edit', ['id'=>$renegociacao->id]) }}" class="btn-sm btn-success">Editar</a>
                         <a href="#" onclick="return ConfirmaExclusao({{$renegociacao->id}})" class="btn-sm btn-danger">Remover</a>
                     </td>
-                    <br>
                 </tr>
             @endforeach
         </tbody>

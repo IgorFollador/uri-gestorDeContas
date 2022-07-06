@@ -19,6 +19,11 @@
 		</div>
 
 		<div class="form-group">
+			{!! Form::label('valor', 'Valor:') !!}
+			{!! Form::text('valor', null, ['class'=>'form-control', 'required']) !!}
+		</div>
+
+		<div class="form-group">
 			{!! Form::label('categoriaContas_id', 'Categoria:') !!}
 			{!! Form::select('categoriaContas_id',
 				\App\Models\CategoriaConta::orderBy('categoria')->pluck('categoria', 'id')->toArray(),
@@ -29,6 +34,20 @@
 			{!! Form::label('forma_de_pagamento_id', 'Forma de Pagamento:') !!}
 			{!! Form::select('forma_de_pagamento_id',
 				\App\Models\FormaDePagamento::orderBy('descricao')->pluck('descricao', 'id')->toArray(),
+				null, ['class'=>'form-control', 'required']) !!}
+		</div>
+
+		<div class="form-group">
+			{!! Form::label('moedas_id', 'Moeda:') !!}
+			{!! Form::select('moedas_id',
+				\App\Models\Moeda::orderBy('descricao')->pluck('descricao', 'id')->toArray(),
+				null, ['class'=>'form-control', 'required']) !!}
+		</div>
+
+		<div class="form-group">
+			{!! Form::label('juros_id', 'Juro:') !!}
+			{!! Form::select('juros_id',
+				\App\Models\Juro::orderBy('porcentagem')->pluck('porcentagem', 'id')->toArray(),
 				null, ['class'=>'form-control', 'required']) !!}
 		</div>
 

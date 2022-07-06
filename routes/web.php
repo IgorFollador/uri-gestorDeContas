@@ -16,13 +16,13 @@ Route::group(['prefix'=>'FormaDePagamento', 'where'=>['id'=>'[0-9]+']], function
     Route::put('{id}/update',   ['as'=>'FormaDePagamento.update',     'uses'=>'\App\Http\Controllers\FormaDePagamentoController@update']);
 });
 
-Route::group(['prefix'=>'jurosEMultas', 'where'=>['id'=>'[0-9]+']], function() {
-    Route::get('',                 ['as'=>'jurosEMultas',            'uses'=>'\App\Http\Controllers\JurosEMultasController@index']);
-    Route::get('create',           ['as'=>'jurosEMultas.create',     'uses'=>'\App\Http\Controllers\JurosEMultasController@create']);
-    Route::get('{id}/destroy',     ['as'=>'jurosEMultas.destroy',    'uses'=>'\App\Http\Controllers\JurosEMultasController@destroy']);
-    Route::get('{id}/edit',        ['as'=>'jurosEMultas.edit',       'uses'=>'\App\Http\Controllers\JurosEMultasController@edit']);
-    Route::put('{id}/update',      ['as'=>'jurosEMultas.update',     'uses'=>'\App\Http\Controllers\JurosEMultasController@update']);
-    Route::post('store',           ['as'=>'jurosEMultas.store',      'uses'=>'\App\Http\Controllers\JurosEMultasController@store']);
+Route::group(['prefix'=>'juros', 'where'=>['id'=>'[0-9]+']], function() {
+    Route::get('',                 ['as'=>'juros',            'uses'=>'\App\Http\Controllers\JurosController@index']);
+    Route::get('create',           ['as'=>'juros.create',     'uses'=>'\App\Http\Controllers\JurosController@create']);
+    Route::get('{id}/destroy',     ['as'=>'juros.destroy',    'uses'=>'\App\Http\Controllers\JurosController@destroy']);
+    Route::get('{id}/edit',        ['as'=>'juros.edit',       'uses'=>'\App\Http\Controllers\JurosController@edit']);
+    Route::put('{id}/update',      ['as'=>'juros.update',     'uses'=>'\App\Http\Controllers\JurosController@update']);
+    Route::post('store',           ['as'=>'juros.store',      'uses'=>'\App\Http\Controllers\JurosController@store']);
 });
 
 Route::group(['prefix'=>'parcelas', 'where'=>['id'=>'[0-9]+']], function() {
@@ -86,6 +86,24 @@ Route::group(['prefix'=>'renegociacao', 'where'=>['id'=>'[0-9]+']], function() {
     Route::get('{id}/edit',        ['as'=>'renegociacao.edit',       'uses'=>'\App\Http\Controllers\RenegociacaoController@edit']);
     Route::put('{id}/update',      ['as'=>'renegociacao.update',     'uses'=>'\App\Http\Controllers\RenegociacaoController@update']);
     Route::post('store',           ['as'=>'renegociacao.store',      'uses'=>'\App\Http\Controllers\RenegociacaoController@store']);
+});
+
+Route::group(['prefix'=>'moedas', 'where'=>['id'=>'[0-9]+']], function() {
+    Route::get('',                 ['as'=>'moedas',            'uses'=>'\App\Http\Controllers\MoedasController@index']);
+    Route::get('create',           ['as'=>'moedas.create',     'uses'=>'\App\Http\Controllers\MoedasController@create']);
+    Route::get('{id}/destroy',     ['as'=>'moedas.destroy',    'uses'=>'\App\Http\Controllers\MoedasController@destroy']);
+    Route::get('{id}/edit',        ['as'=>'moedas.edit',       'uses'=>'\App\Http\Controllers\MoedasController@edit']);
+    Route::put('{id}/update',      ['as'=>'moedas.update',     'uses'=>'\App\Http\Controllers\MoedasController@update']);
+    Route::post('store',           ['as'=>'moedas.store',      'uses'=>'\App\Http\Controllers\MoedasController@store']);
+});
+
+Route::group(['prefix'=>'estornos', 'where'=>['id'=>'[0-9]+']], function() {
+    Route::get('',                 ['as'=>'estornos',            'uses'=>'\App\Http\Controllers\EstornosController@index']);
+    Route::get('create',           ['as'=>'estornos.create',     'uses'=>'\App\Http\Controllers\EstornosController@create']);
+    Route::get('{id}/destroy',     ['as'=>'estornos.destroy',    'uses'=>'\App\Http\Controllers\EstornosController@destroy']);
+    Route::get('{id}/edit',        ['as'=>'estornos.edit',       'uses'=>'\App\Http\Controllers\EstornosController@edit']);
+    Route::put('{id}/update',      ['as'=>'estornos.update',     'uses'=>'\App\Http\Controllers\EstornosController@update']);
+    Route::post('store',           ['as'=>'estornos.store',      'uses'=>'\App\Http\Controllers\EstornosController@store']);
 });
 
 Auth::routes();

@@ -6,6 +6,7 @@
         <thead>
             <th>Nome</th>
             <th>Data de nascimento</th>
+            <th>Ações</th>
         </thead>
 
         <tbody>
@@ -16,7 +17,6 @@
                         <a href="{{ route('usuarios.edit', ['id'=>$usuario->id]) }}" class="btn-sm btn-success">Editar</a>
                         <a href="#" onclick="return ConfirmaExclusao({{$usuario->id}})" class="btn-sm btn-danger">Remover</a>
                     </td>
-                    <br>
                 </tr>
             @endforeach
         </tbody>

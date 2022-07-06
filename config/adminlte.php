@@ -251,12 +251,12 @@ return [
             'url'  => 'categoriaContas',
             'icon' => 'fas fa-fw fa-bars',
         ],
-      
-        // ['header' => 'JUROS E MULTA'],
+        
+        // ['header' => 'JUROS'],
         [
-            'text' => 'Juros e Multas',
-            'url'  => 'jurosEMultas',
-            'icon' => 'fas fa-fw fa-balance-scale',
+            'text' => 'Juros',
+            'url'  => 'juros',
+            'icon' => 'fas fa-fw fa-flag',
         ],
         
         // ['header' => 'PARCELAS'],
@@ -266,7 +266,30 @@ return [
             'icon' => 'fas fa-fw fa-list-ol',
         ],
 
+        // ['header' => 'ESTORNOS'],
+        [
+            'text' => 'Estornos',
+            'url'  => 'estornos',
+            'icon' => 'fas fa-fw fa-exchange-alt'
+        ],
+
         ['header' => 'MAIS'],
+
+        // ['header' => 'MOEDAS'],
+        [
+            'text' => 'Moedas',
+            'url'  => 'moedas',
+            'icon' => 'fas fa-fw fa-flag',
+        ],
+
+         // ['header' => 'RENEGOCIAÇÃO'],
+         [
+            'text' => 'Renegociações de Dívidas',
+            'url'  => 'renegociacao',
+            'icon' => 'fas fa-fw fa-lock-open',
+        ],
+
+        // ['header' => 'HISTORICOS'],
         [
             'text' => 'Históricos',
             'url'  => 'historicos',
@@ -298,7 +321,6 @@ return [
             'url'  => '',
             'icon' => 'fas fa-fw fa-cogs',
         ],
-
     ],
 
     /*

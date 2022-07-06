@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('content')
-    <h3>Editando Juro e Multa: {{ $juroEMulta->descricao }}</h3>
+    <h3>Editando Juro: {{ $juro->porcentagem }}</h3>
 
     @if($errors->any())
         <ul class="alert alert-danger">
@@ -11,15 +11,15 @@
         </ul>
     @endif
 
-    {!! Form::open(['route'=>['jurosEMultas.update', 'id'=>$juroEMulta->id], 'method'=>'put']) !!}
+    {!! Form::open(['route'=>['juros.update', 'id'=>$juro->id], 'method'=>'put']) !!}
         
         <div class="form-group">
-            {!! Form::label('descricao', 'Descrição:') !!}
-            {!! Form::text('descricao', $juroEMulta->descricao, ['class'=>'form-control', 'required']) !!}
+            {!! Form::label('porcentagem', 'Porcentagem:') !!}
+            {!! Form::text('porcentagem', $juro->porcentagem, ['class'=>'form-control', 'required']) !!}
         </div>
 
         <div class="form-group">
-            {!! Form::submit('Editar Multa e Juro', ['class'=>'btn btn-primary']) !!}
+            {!! Form::submit('Editar Juro', ['class'=>'btn btn-primary']) !!}
             {!! Form::reset('Limpar', ['class'=>'btn btn-default']) !!}
         </div>
     

@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('contas', function (Blueprint $table) {
-            $table->id();
-            $table->string('descricao', 100);
-            $table->float('valor');
-            $table->timestamps();
+        Schema::table('estornos', function (Blueprint $table) {
+            $table->bigInteger('moedas_id')->unsigned()->nullable();
+            $table->foreign('moedas_id')->references('id')->on('moedas');
         });
     }
 
@@ -28,6 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contas');
+        Schema::table('estornos', function (Blueprint $table) {
+            //
+        });
     }
 };
