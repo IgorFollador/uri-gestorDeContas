@@ -13,10 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('jurosEMultas', function (Blueprint $table) {
-            $table->id();
-            $table->string('descricao', 50);
-            $table->timestamps();
+        Schema::table('contas', function (Blueprint $table) {
+            $table->bigInteger('juros_id')->unsigned()->nullable();
+            $table->foreign('juros_id')->references('id')->on('juros');
         });
     }
 
@@ -27,6 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jurosEMultas');
+        Schema::table('contas', function (Blueprint $table) {
+            //
+        });
     }
 };

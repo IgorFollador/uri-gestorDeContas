@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('content')
-    <h3>Novo Juro e Multa</h3>
+    <h3>Novo Juro</h3>
 
     @if($errors->any())
         <ul class="alert alert-danger">
@@ -11,15 +11,15 @@
         </ul>
     @endif
 
-    {!! Form::open(['route'=>'jurosEMultas.store']) !!}
+    {!! Form::open(['route'=>'juros.store']) !!}
         
         <div class="form-group">
-            {!! Form::label('descricao', 'Descrição:') !!}
-            {!! Form::text('descricao', null, ['class'=>'form-control', 'required']) !!}
+            {!! Form::label('porcentagem', 'Porcentagem:') !!}
+            {!! Form::text('porcentagem', null, ['class'=>'form-control', 'required']) !!}
         </div>
         
         <div class="form-group">
-            {!! Form::submit('Criar Juro e Multa', ['class'=>'btn btn-primary']) !!}
+            {!! Form::submit('Criar Juro', ['class'=>'btn btn-primary']) !!}
             {!! Form::reset('Limpar', ['class'=>'btn btn-default']) !!}
         </div>
     
