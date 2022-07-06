@@ -5,6 +5,7 @@
     <table class = "table table-stripe table-bordered table-hover">
         <thead>
             <th>Categoria</th>
+            <th>Ações</th>
         </thead>
 
         <tbody>

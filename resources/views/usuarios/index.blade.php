@@ -6,6 +6,7 @@
         <thead>
             <th>Nome</th>
             <th>Data de nascimento</th>
+            <th>Ações</th>
         </thead>
 
         <tbody>

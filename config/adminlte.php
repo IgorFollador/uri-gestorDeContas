@@ -285,6 +285,19 @@ return [
             'icon' => 'fas fa-fw fa-flag',
         ],
 
+        ['header' => 'MOEDAS'],
+        [
+            'text' => 'Moedas',
+            'url'  => 'moedas',
+            'icon' => 'fas fa-fw fa-flag',
+        ],
+
+        ['header' => 'ESTORNOS'],
+        [
+            'text' => 'Estornos',
+            'url'  => 'estornos',
+        ],
+
         ['header' => 'HISTORICOS'],
         [
             'text' => 'Historicos',
@@ -298,7 +311,6 @@ return [
             'url'  => 'tesourarias',
             'icon' => 'fas fa-fw fa-flag',
         ],
-
     ],
 
     /*
